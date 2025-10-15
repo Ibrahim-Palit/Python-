@@ -1,0 +1,71 @@
+print(r'''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+#asciiart
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+crossroad = input('You\'re at a cross road. where do you want to go? '
+                  'Type "left" or "right".').lower()
+
+if crossroad == "left":
+    choice = input('You\'re at a lake, '
+                    'There is an island in the middle of the lake. '
+                    'Type "wait" to wait for a boat. '
+                    'Type "swim" to swim across').lower()
+    if choice == "wait":
+        choice2 = input('You have arrived at a castle with 3 doors, One blue, One yellow and one red,  '
+              'Type "red" for the red door,'
+              '"blue" for the blue door and '
+              '"yellow" for the yellow door').lower()
+        if choice2 == "red":
+            print("Its a room full of snakes lol, GAME OVER")
+        elif choice2 == "yellow":
+            print("You found the room full of treasure YAY")
+        elif choice2 == "blue":
+            print("its a room full of water and your drowned, GAME OVER")
+        else:
+            secret_door = input('You chose a secret door :), would you like to fight the beast inside?, type "yes" or "no"').lower()
+            if secret_door == "yes":
+                attack_method = input("You grab a sword of the floor and decide to attack the fierce beast, "
+                                      "do you try cut its head or stab its heart?")
+                if attack_method == "cut its head":
+                    print("CONGRATULATIONS, you have defeated the castle beast and can now take all the treasure in the castle")
+
+                elif attack_method == "stab its heart":
+                    print("oops, the beast knocked the sword out of your hand and bit your head off, GAME OVER")
+
+                else:
+                    print("You typed the wrong answer and the beast just ate you")
+
+            elif secret_door == "no":
+                print("you tried to run away but the beast ate you for lunch")
+
+            else:
+                print("You chose the wrong answer and got mawled by the beast")
+
+
+    else:
+        print("You tried to swim across a lake and died lol")
+
+else:
+    print("You have fell down a pot hole and died, GAME OVER")
