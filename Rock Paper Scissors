@@ -58,7 +58,7 @@ scissors = '''
 #elif choice == scissors and R_P_S == paper:
  #   print("yay you win")'''
 
-#------------ Above was my attempt without no guidance
+#------------ Above was my attempt without guidance
 images = [rock, paper, scissors]
 
 user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper or 2 for scissors. \n"))
