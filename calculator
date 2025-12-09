@@ -1,0 +1,43 @@
+def add(n1, n2):
+    return n1 + n2
+
+def sub(n1, n2):
+    return n1 - n2
+
+def div(n1, n2):
+    return n1 / n2
+
+def mult(n1, n2):
+    return n1 * n2
+
+Calculator = {
+    "+": add,
+    "-": sub,
+    "*": mult,
+    "/": div,
+}
+
+
+def calc():
+    should_accum = True
+    num1 = float(input("What is the first number?: "))
+
+    while should_accum:
+        for symbol in Calculator:
+            print(symbol)
+        operation = input("Pick an operation: ")
+        num2 = float(input("What is the next number?: "))
+        answer = Calculator[operation](num1, num2)
+        print(f" {num1} {operation} {num2} = {answer}")
+
+        choice = input(f"type y to continue calculating with {answer}, or type n to start a new calculation")
+
+        if choice == "y":
+            num1 = answer
+
+        else:
+            should_accum = False
+            print("\n" * 10)
+            calc()
+
+calc()
